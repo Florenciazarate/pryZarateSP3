@@ -185,7 +185,7 @@
             // 
             btnRegistrar.BackColor = Color.Tan;
             btnRegistrar.FlatStyle = FlatStyle.Flat;
-            btnRegistrar.Font = new Font("Nirmala UI", 12F);
+            btnRegistrar.Font = new Font("Nirmala UI", 11.25F);
             btnRegistrar.Location = new Point(340, 51);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(86, 33);
@@ -197,7 +197,7 @@
             // 
             btnSalir.BackColor = Color.AntiqueWhite;
             btnSalir.FlatStyle = FlatStyle.Popup;
-            btnSalir.Font = new Font("Nirmala UI", 12F);
+            btnSalir.Font = new Font("Nirmala UI", 11.25F);
             btnSalir.Location = new Point(340, 92);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(86, 33);
@@ -209,7 +209,7 @@
             // 
             btnConsultar.BackColor = Color.Tan;
             btnConsultar.FlatStyle = FlatStyle.Flat;
-            btnConsultar.Font = new Font("Nirmala UI", 12F);
+            btnConsultar.Font = new Font("Nirmala UI", 11.25F);
             btnConsultar.Location = new Point(419, 223);
             btnConsultar.Name = "btnConsultar";
             btnConsultar.Size = new Size(86, 33);
@@ -219,6 +219,7 @@
             // 
             // lyt1
             // 
+            lyt1.BackColor = Color.BlanchedAlmond;
             lyt1.Location = new Point(30, 34);
             lyt1.Name = "lyt1";
             lyt1.Size = new Size(283, 119);
@@ -226,6 +227,7 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.BackColor = Color.BlanchedAlmond;
             flowLayoutPanel1.Location = new Point(30, 172);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(375, 136);
@@ -236,7 +238,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AntiqueWhite;
-            ClientSize = new Size(541, 354);
+            ClientSize = new Size(541, 343);
             Controls.Add(btnConsultar);
             Controls.Add(btnSalir);
             Controls.Add(btnRegistrar);
