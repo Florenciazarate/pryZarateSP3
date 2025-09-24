@@ -76,15 +76,17 @@
             // lblRegistroTurnos
             // 
             lblRegistroTurnos.AutoSize = true;
-            lblRegistroTurnos.Location = new Point(43, 25);
+            lblRegistroTurnos.Font = new Font("Nirmala UI", 12F);
+            lblRegistroTurnos.Location = new Point(43, 24);
             lblRegistroTurnos.Name = "lblRegistroTurnos";
-            lblRegistroTurnos.Size = new Size(103, 15);
+            lblRegistroTurnos.Size = new Size(138, 21);
             lblRegistroTurnos.TabIndex = 4;
             lblRegistroTurnos.Text = "Registro de turnos";
             // 
             // lblDominio
             // 
             lblDominio.AutoSize = true;
+            lblDominio.Font = new Font("Nirmala UI", 9F);
             lblDominio.Location = new Point(43, 88);
             lblDominio.Name = "lblDominio";
             lblDominio.Size = new Size(53, 15);
@@ -94,6 +96,7 @@
             // lblNumeroTurno
             // 
             lblNumeroTurno.AutoSize = true;
+            lblNumeroTurno.Font = new Font("Nirmala UI", 9F);
             lblNumeroTurno.Location = new Point(43, 59);
             lblNumeroTurno.Name = "lblNumeroTurno";
             lblNumeroTurno.Size = new Size(99, 15);
@@ -110,24 +113,27 @@
             // lblAñoFabricacion
             // 
             lblAñoFabricacion.AutoSize = true;
+            lblAñoFabricacion.Font = new Font("Nirmala UI", 9F);
             lblAñoFabricacion.Location = new Point(43, 117);
             lblAñoFabricacion.Name = "lblAñoFabricacion";
-            lblAñoFabricacion.Size = new Size(88, 15);
+            lblAñoFabricacion.Size = new Size(91, 15);
             lblAñoFabricacion.TabIndex = 9;
-            lblAñoFabricacion.Text = "Año fabricacón";
+            lblAñoFabricacion.Text = "Año fabricación";
             // 
             // lblEstadísticas
             // 
             lblEstadísticas.AutoSize = true;
-            lblEstadísticas.Location = new Point(46, 165);
+            lblEstadísticas.Font = new Font("Nirmala UI", 12F);
+            lblEstadísticas.Location = new Point(46, 161);
             lblEstadísticas.Name = "lblEstadísticas";
-            lblEstadísticas.Size = new Size(67, 15);
+            lblEstadísticas.Size = new Size(89, 21);
             lblEstadísticas.TabIndex = 10;
             lblEstadísticas.Text = "Estadísticas";
             // 
             // lblCantidadTurnos
             // 
             lblCantidadTurnos.AutoSize = true;
+            lblCantidadTurnos.Font = new Font("Nirmala UI", 9F);
             lblCantidadTurnos.Location = new Point(47, 201);
             lblCantidadTurnos.Name = "lblCantidadTurnos";
             lblCantidadTurnos.Size = new Size(108, 15);
@@ -137,16 +143,18 @@
             // lblAñoMasAntiguo
             // 
             lblAñoMasAntiguo.AutoSize = true;
-            lblAñoMasAntiguo.Location = new Point(47, 227);
+            lblAñoMasAntiguo.Font = new Font("Nirmala UI", 9F);
+            lblAñoMasAntiguo.Location = new Point(47, 231);
             lblAñoMasAntiguo.Name = "lblAñoMasAntiguo";
             lblAñoMasAntiguo.Size = new Size(117, 15);
             lblAñoMasAntiguo.TabIndex = 12;
-            lblAñoMasAntiguo.Text = "Año del mas antiguo";
+            lblAñoMasAntiguo.Text = "Año del más antiguo";
             // 
             // lblCantDominios
             // 
             lblCantDominios.AutoSize = true;
-            lblCantDominios.Location = new Point(47, 258);
+            lblCantDominios.Font = new Font("Nirmala UI", 9F);
+            lblCantDominios.Location = new Point(47, 260);
             lblCantDominios.Name = "lblCantDominios";
             lblCantDominios.Size = new Size(212, 15);
             lblCantDominios.TabIndex = 13;
@@ -154,51 +162,60 @@
             // 
             // txtCantidadTurnos
             // 
-            txtCantidadTurnos.Location = new Point(291, 193);
+            txtCantidadTurnos.Location = new Point(267, 193);
             txtCantidadTurnos.Name = "txtCantidadTurnos";
             txtCantidadTurnos.Size = new Size(100, 23);
             txtCantidadTurnos.TabIndex = 14;
             // 
             // txtAñoMasAntiguo
             // 
-            txtAñoMasAntiguo.Location = new Point(291, 224);
+            txtAñoMasAntiguo.Location = new Point(267, 224);
             txtAñoMasAntiguo.Name = "txtAñoMasAntiguo";
             txtAñoMasAntiguo.Size = new Size(100, 23);
             txtAñoMasAntiguo.TabIndex = 15;
             // 
             // txtCantidadConDominios
             // 
-            txtCantidadConDominios.Location = new Point(291, 255);
+            txtCantidadConDominios.Location = new Point(267, 255);
             txtCantidadConDominios.Name = "txtCantidadConDominios";
             txtCantidadConDominios.Size = new Size(100, 23);
             txtCantidadConDominios.TabIndex = 16;
             // 
             // btnRegistrar
             // 
+            btnRegistrar.BackColor = Color.Tan;
+            btnRegistrar.FlatStyle = FlatStyle.Flat;
+            btnRegistrar.Font = new Font("Nirmala UI", 12F);
             btnRegistrar.Location = new Point(340, 51);
             btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new Size(75, 23);
+            btnRegistrar.Size = new Size(86, 33);
             btnRegistrar.TabIndex = 17;
             btnRegistrar.Text = "Registrar";
-            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.UseVisualStyleBackColor = false;
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(340, 88);
+            btnSalir.BackColor = Color.AntiqueWhite;
+            btnSalir.FlatStyle = FlatStyle.Popup;
+            btnSalir.Font = new Font("Nirmala UI", 12F);
+            btnSalir.Location = new Point(340, 92);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(75, 23);
+            btnSalir.Size = new Size(86, 33);
             btnSalir.TabIndex = 18;
             btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.UseVisualStyleBackColor = false;
             // 
             // btnConsultar
             // 
-            btnConsultar.Location = new Point(423, 223);
+            btnConsultar.BackColor = Color.Tan;
+            btnConsultar.FlatStyle = FlatStyle.Flat;
+            btnConsultar.Font = new Font("Nirmala UI", 12F);
+            btnConsultar.Location = new Point(419, 223);
             btnConsultar.Name = "btnConsultar";
-            btnConsultar.Size = new Size(75, 23);
+            btnConsultar.Size = new Size(86, 33);
             btnConsultar.TabIndex = 19;
             btnConsultar.Text = "Consultar";
-            btnConsultar.UseVisualStyleBackColor = true;
+            btnConsultar.UseVisualStyleBackColor = false;
             // 
             // lyt1
             // 
@@ -209,7 +226,7 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Location = new Point(30, 165);
+            flowLayoutPanel1.Location = new Point(30, 172);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(375, 136);
             flowLayoutPanel1.TabIndex = 21;
@@ -218,7 +235,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(541, 450);
+            BackColor = Color.AntiqueWhite;
+            ClientSize = new Size(541, 354);
             Controls.Add(btnConsultar);
             Controls.Add(btnSalir);
             Controls.Add(btnRegistrar);
@@ -239,7 +257,9 @@
             Controls.Add(txtDominio);
             Controls.Add(lyt1);
             Controls.Add(flowLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmAutoTest";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmAutoTest";
             ((System.ComponentModel.ISupportInitialize)numFabricacion).EndInit();
             ResumeLayout(false);
