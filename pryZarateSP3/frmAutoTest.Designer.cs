@@ -46,21 +46,25 @@
             btnRegistrar = new Button();
             btnSalir = new Button();
             btnConsultar = new Button();
-            lyt1 = new FlowLayoutPanel();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            lblTitular = new Label();
+            txtTitular = new TextBox();
+            flowLayoutPanel2 = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)numFabricacion).BeginInit();
             SuspendLayout();
             // 
             // txtDominio
             // 
             txtDominio.Location = new Point(148, 51);
+            txtDominio.MaxLength = 5;
             txtDominio.Name = "txtDominio";
             txtDominio.Size = new Size(100, 23);
             txtDominio.TabIndex = 0;
             // 
             // txtAñoFabricacion
             // 
-            txtAñoFabricacion.Location = new Point(148, 80);
+            txtAñoFabricacion.Location = new Point(148, 81);
+            txtAñoFabricacion.MaxLength = 7;
             txtAñoFabricacion.Name = "txtAñoFabricacion";
             txtAñoFabricacion.Size = new Size(100, 23);
             txtAñoFabricacion.TabIndex = 1;
@@ -105,10 +109,13 @@
             // 
             // numFabricacion
             // 
-            numFabricacion.Location = new Point(148, 109);
+            numFabricacion.Location = new Point(148, 112);
+            numFabricacion.Maximum = new decimal(new int[] { 2025, 0, 0, 0 });
+            numFabricacion.Minimum = new decimal(new int[] { 1950, 0, 0, 0 });
             numFabricacion.Name = "numFabricacion";
             numFabricacion.Size = new Size(120, 23);
             numFabricacion.TabIndex = 8;
+            numFabricacion.Value = new decimal(new int[] { 1950, 0, 0, 0 });
             // 
             // lblAñoFabricacion
             // 
@@ -124,7 +131,7 @@
             // 
             lblEstadísticas.AutoSize = true;
             lblEstadísticas.Font = new Font("Nirmala UI", 12F);
-            lblEstadísticas.Location = new Point(46, 161);
+            lblEstadísticas.Location = new Point(46, 207);
             lblEstadísticas.Name = "lblEstadísticas";
             lblEstadísticas.Size = new Size(89, 21);
             lblEstadísticas.TabIndex = 10;
@@ -134,7 +141,7 @@
             // 
             lblCantidadTurnos.AutoSize = true;
             lblCantidadTurnos.Font = new Font("Nirmala UI", 9F);
-            lblCantidadTurnos.Location = new Point(47, 201);
+            lblCantidadTurnos.Location = new Point(47, 247);
             lblCantidadTurnos.Name = "lblCantidadTurnos";
             lblCantidadTurnos.Size = new Size(108, 15);
             lblCantidadTurnos.TabIndex = 11;
@@ -144,7 +151,7 @@
             // 
             lblAñoMasAntiguo.AutoSize = true;
             lblAñoMasAntiguo.Font = new Font("Nirmala UI", 9F);
-            lblAñoMasAntiguo.Location = new Point(47, 231);
+            lblAñoMasAntiguo.Location = new Point(47, 277);
             lblAñoMasAntiguo.Name = "lblAñoMasAntiguo";
             lblAñoMasAntiguo.Size = new Size(117, 15);
             lblAñoMasAntiguo.TabIndex = 12;
@@ -154,7 +161,7 @@
             // 
             lblCantDominios.AutoSize = true;
             lblCantDominios.Font = new Font("Nirmala UI", 9F);
-            lblCantDominios.Location = new Point(47, 260);
+            lblCantDominios.Location = new Point(47, 306);
             lblCantDominios.Name = "lblCantDominios";
             lblCantDominios.Size = new Size(212, 15);
             lblCantDominios.TabIndex = 13;
@@ -162,22 +169,25 @@
             // 
             // txtCantidadTurnos
             // 
-            txtCantidadTurnos.Location = new Point(267, 193);
+            txtCantidadTurnos.Location = new Point(267, 239);
             txtCantidadTurnos.Name = "txtCantidadTurnos";
+            txtCantidadTurnos.ReadOnly = true;
             txtCantidadTurnos.Size = new Size(100, 23);
             txtCantidadTurnos.TabIndex = 14;
             // 
             // txtAñoMasAntiguo
             // 
-            txtAñoMasAntiguo.Location = new Point(267, 224);
+            txtAñoMasAntiguo.Location = new Point(267, 270);
             txtAñoMasAntiguo.Name = "txtAñoMasAntiguo";
+            txtAñoMasAntiguo.ReadOnly = true;
             txtAñoMasAntiguo.Size = new Size(100, 23);
             txtAñoMasAntiguo.TabIndex = 15;
             // 
             // txtCantidadConDominios
             // 
-            txtCantidadConDominios.Location = new Point(267, 255);
+            txtCantidadConDominios.Location = new Point(267, 301);
             txtCantidadConDominios.Name = "txtCantidadConDominios";
+            txtCantidadConDominios.ReadOnly = true;
             txtCantidadConDominios.Size = new Size(100, 23);
             txtCantidadConDominios.TabIndex = 16;
             // 
@@ -210,35 +220,55 @@
             btnConsultar.BackColor = Color.Tan;
             btnConsultar.FlatStyle = FlatStyle.Flat;
             btnConsultar.Font = new Font("Nirmala UI", 11.25F);
-            btnConsultar.Location = new Point(419, 223);
+            btnConsultar.Location = new Point(419, 269);
             btnConsultar.Name = "btnConsultar";
             btnConsultar.Size = new Size(86, 33);
             btnConsultar.TabIndex = 19;
             btnConsultar.Text = "Consultar";
             btnConsultar.UseVisualStyleBackColor = false;
             // 
-            // lyt1
-            // 
-            lyt1.BackColor = Color.BlanchedAlmond;
-            lyt1.Location = new Point(30, 34);
-            lyt1.Name = "lyt1";
-            lyt1.Size = new Size(283, 119);
-            lyt1.TabIndex = 20;
-            // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.BackColor = Color.BlanchedAlmond;
-            flowLayoutPanel1.Location = new Point(30, 172);
+            flowLayoutPanel1.Location = new Point(30, 218);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(375, 136);
+            flowLayoutPanel1.Size = new Size(375, 129);
             flowLayoutPanel1.TabIndex = 21;
+            // 
+            // lblTitular
+            // 
+            lblTitular.AutoSize = true;
+            lblTitular.Font = new Font("Nirmala UI", 9F);
+            lblTitular.Location = new Point(44, 148);
+            lblTitular.Name = "lblTitular";
+            lblTitular.Size = new Size(41, 15);
+            lblTitular.TabIndex = 23;
+            lblTitular.Text = "Titular";
+            // 
+            // txtTitular
+            // 
+            txtTitular.Location = new Point(147, 142);
+            txtTitular.MaxLength = 30;
+            txtTitular.Name = "txtTitular";
+            txtTitular.Size = new Size(100, 23);
+            txtTitular.TabIndex = 22;
+            // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.BackColor = Color.BlanchedAlmond;
+            flowLayoutPanel2.Location = new Point(30, 37);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(281, 146);
+            flowLayoutPanel2.TabIndex = 22;
             // 
             // frmAutoTest
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AntiqueWhite;
-            ClientSize = new Size(541, 343);
+            ClientSize = new Size(661, 470);
+            Controls.Add(lblTitular);
+            Controls.Add(txtTitular);
             Controls.Add(btnConsultar);
             Controls.Add(btnSalir);
             Controls.Add(btnRegistrar);
@@ -257,12 +287,13 @@
             Controls.Add(label1);
             Controls.Add(txtAñoFabricacion);
             Controls.Add(txtDominio);
-            Controls.Add(lyt1);
             Controls.Add(flowLayoutPanel1);
+            Controls.Add(flowLayoutPanel2);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmAutoTest";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmAutoTest";
+            Load += frmAutoTest_Load;
             ((System.ComponentModel.ISupportInitialize)numFabricacion).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -288,7 +319,9 @@
         private Button btnRegistrar;
         private Button btnSalir;
         private Button btnConsultar;
-        private FlowLayoutPanel lyt1;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Label lblTitular;
+        private TextBox txtTitular;
+        private FlowLayoutPanel flowLayoutPanel2;
     }
 }

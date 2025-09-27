@@ -8,4 +8,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NetDimension.NanUI" Version="1.1.109.6" />
+  </ItemGroup>
+
 </Project>

@@ -16,5 +16,20 @@ namespace pryZarateSP3
         {
             InitializeComponent();
         }
+        public struct TURNO
+        {
+            public int NumeroTurno;
+            public string Dominio;
+            public int AnioFabricacion;
+            public string Titular;
+        };
+        const int MAX = 50;
+        public TURNO[] turnos;
+        public int Cantidad = 0;
+
+        private void frmAutoTest_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
