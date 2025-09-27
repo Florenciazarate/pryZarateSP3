@@ -60,6 +60,7 @@
             txtNumeroTurno.Name = "txtNumeroTurno";
             txtNumeroTurno.Size = new Size(100, 23);
             txtNumeroTurno.TabIndex = 0;
+            txtNumeroTurno.KeyPress += txtNumeroTurno_KeyPress;
             // 
             // txtDominio
             // 
@@ -68,6 +69,7 @@
             txtDominio.Name = "txtDominio";
             txtDominio.Size = new Size(100, 23);
             txtDominio.TabIndex = 1;
+            txtDominio.KeyPress += txtDominio_KeyPress;
             // 
             // label1
             // 

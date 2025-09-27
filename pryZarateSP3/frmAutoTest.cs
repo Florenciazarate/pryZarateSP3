@@ -28,7 +28,7 @@ namespace pryZarateSP3
         public int Cantidad = 0;
         private void inicializarInterfaz()
         {
-            limpiarControles(); 
+            limpiarControles();
             txtCantidadConDominios.Clear();
             txtCantidadTurnos.Clear();
             txtAñoMasAntiguo.Clear();
@@ -46,6 +46,91 @@ namespace pryZarateSP3
             Cantidad = 0;
             inicializarInterfaz();
         }
+
+        private void txtNumeroTurno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+        private void txtDominio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLower(e.KeyChar))
+            {
+                e.KeyChar = Char.ToUpper(e.KeyChar);
+            }
+            if (!Char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+        private bool ValidarDatos()
+        {
+            bool resultado = false;
+            if (txtNumeroTurno.Text != "" && txtDominio.Text != "" && txtTitular.Text != "")
+            {
+                if (txtDominio.Text.Length >= 6)
+                {
+                    if (!BuscarTurno(int.Parse(txtNumeroTurno.Text)))
+                    {
+                        resultado = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Número de Turno ingresado ya existe",
+                        "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El Dominio debe tener 6 o 7 caracteres",
+                    "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe completar los datos faltantes", "ERROR",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return resultado;
+        }
+        private bool BuscarTurno(int numero)
+        {
+            bool existe = false;
+            int pos = 0;
+
+            while (pos < Cantidad)
+            {
+
+                if (numero == turnos[pos].NumeroTurno)
+                {
+                    existe = true;
+                    break;
+                }
+                pos++;
+            }
+            return existe;
+        }
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (ValidarDatos())
+            {
+                turnos[Cantidad].NumeroTurno = int.Parse(txtNumeroTurno.Text);
+                turnos[Cantidad].Dominio = txtDominio.Text;
+                turnos[Cantidad].AñoFabricacion =
+                int.Parse(numFabricacion.Value.ToString());
+                turnos[Cantidad].Titular = txtTitular.Text;
+                Cantidad++;
+                if (Cantidad == MAX)
+                {
+                    MessageBox.Show("Se completó la capacidad de carga de datos",
+                    "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    btnRegistrar.Enabled = false;
+                    limpiarControles();
+                }
+            }
+        }
     }
-    }
+}
 
