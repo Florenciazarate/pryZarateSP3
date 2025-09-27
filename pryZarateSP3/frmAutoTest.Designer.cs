@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            txtNumeroTurno = new TextBox();
             txtDominio = new TextBox();
-            txtAñoFabricacion = new TextBox();
             label1 = new Label();
             lblRegistroTurnos = new Label();
             lblDominio = new Label();
@@ -53,21 +53,21 @@
             ((System.ComponentModel.ISupportInitialize)numFabricacion).BeginInit();
             SuspendLayout();
             // 
+            // txtNumeroTurno
+            // 
+            txtNumeroTurno.Location = new Point(148, 51);
+            txtNumeroTurno.MaxLength = 5;
+            txtNumeroTurno.Name = "txtNumeroTurno";
+            txtNumeroTurno.Size = new Size(100, 23);
+            txtNumeroTurno.TabIndex = 0;
+            // 
             // txtDominio
             // 
-            txtDominio.Location = new Point(148, 51);
-            txtDominio.MaxLength = 5;
+            txtDominio.Location = new Point(148, 81);
+            txtDominio.MaxLength = 7;
             txtDominio.Name = "txtDominio";
             txtDominio.Size = new Size(100, 23);
-            txtDominio.TabIndex = 0;
-            // 
-            // txtAñoFabricacion
-            // 
-            txtAñoFabricacion.Location = new Point(148, 81);
-            txtAñoFabricacion.MaxLength = 7;
-            txtAñoFabricacion.Name = "txtAñoFabricacion";
-            txtAñoFabricacion.Size = new Size(100, 23);
-            txtAñoFabricacion.TabIndex = 1;
+            txtDominio.TabIndex = 1;
             // 
             // label1
             // 
@@ -285,8 +285,8 @@
             Controls.Add(lblDominio);
             Controls.Add(lblRegistroTurnos);
             Controls.Add(label1);
-            Controls.Add(txtAñoFabricacion);
             Controls.Add(txtDominio);
+            Controls.Add(txtNumeroTurno);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(flowLayoutPanel2);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -301,8 +301,8 @@
 
         #endregion
 
+        private TextBox txtNumeroTurno;
         private TextBox txtDominio;
-        private TextBox txtAñoFabricacion;
         private Label label1;
         private Label lblRegistroTurnos;
         private Label lblDominio;
