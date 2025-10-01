@@ -216,6 +216,7 @@
             btnSalir.TabIndex = 18;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // btnConsultar
             // 
@@ -228,6 +229,7 @@
             btnConsultar.TabIndex = 19;
             btnConsultar.Text = "Consultar";
             btnConsultar.UseVisualStyleBackColor = false;
+            btnConsultar.Click += btnConsultar_Click;
             // 
             // flowLayoutPanel1
             // 

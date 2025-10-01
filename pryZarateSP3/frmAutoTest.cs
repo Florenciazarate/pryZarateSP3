@@ -46,7 +46,6 @@ namespace pryZarateSP3
             Cantidad = 0;
             inicializarInterfaz();
         }
-
         private void txtNumeroTurno_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(Char.IsDigit(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
@@ -130,6 +129,36 @@ namespace pryZarateSP3
                     limpiarControles();
                 }
             }
+        }
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            {
+                txtCantidadTurnos.Text = Cantidad.ToString();
+                int menor = int.MaxValue;
+                int pos;
+                for (pos = 0; pos < Cantidad; pos++)
+                {
+                    if (turnos[pos].AñoFabricacion < menor)
+                    {
+                        menor = turnos[pos].AñoFabricacion;
+                    }
+                }
+                txtAñoMasAntiguo.Text = menor.ToString();
+                int contador = 0;
+                for (pos = 0; pos < Cantidad; pos++)
+                {
+                    if (turnos[pos].Dominio.Length == 6)
+                    {
+                        contador++;
+                    }
+                }
+                txtCantidadConDominios.Text = contador.ToString();
+
+            }
+        }
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close  ();
         }
     }
 }
