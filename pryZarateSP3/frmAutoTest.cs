@@ -111,25 +111,6 @@ namespace pryZarateSP3
             }
             return existe;
         }
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            if (ValidarDatos())
-            {
-                turnos[Cantidad].NumeroTurno = int.Parse(txtNumeroTurno.Text);
-                turnos[Cantidad].Dominio = txtDominio.Text;
-                turnos[Cantidad].AñoFabricacion =
-                int.Parse(numFabricacion.Value.ToString());
-                turnos[Cantidad].Titular = txtTitular.Text;
-                Cantidad++;
-                if (Cantidad == MAX)
-                {
-                    MessageBox.Show("Se completó la capacidad de carga de datos",
-                    "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    btnRegistrar.Enabled = false;
-                    limpiarControles();
-                }
-            }
-        }
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             {
@@ -158,8 +139,42 @@ namespace pryZarateSP3
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close  ();
+            this.Close();
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            {
+                {
+                    if (ValidarDatos())
+                    {
+                        turnos[Cantidad].NumeroTurno = int.Parse(txtNumeroTurno.Text);
+                        turnos[Cantidad].Dominio = txtDominio.Text;
+                        turnos[Cantidad].AñoFabricacion = int.Parse(numFabricacion.Value.ToString());
+                        turnos[Cantidad].Titular = txtTitular.Text;
+                        Cantidad++;
+                        txtCantidadTurnos.Enabled = true;
+                        txtAñoMasAntiguo.Enabled = true;
+                        txtCantidadConDominios.Enabled = true;
+                        if (Cantidad == MAX)
+                        {
+                            MessageBox.Show("Se completó la capacidad de carga de datos",
+                            "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            btnRegistrar.Enabled = false;
+                            limpiarControles();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Se registró turno Nº " + Cantidad);
+                            limpiarControles();
+                 
+                        }
+
+                    }
+                }
+            }
         }
     }
 }
+
 

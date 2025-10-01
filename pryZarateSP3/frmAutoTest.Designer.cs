@@ -171,25 +171,25 @@
             // 
             // txtCantidadTurnos
             // 
+            txtCantidadTurnos.Enabled = false;
             txtCantidadTurnos.Location = new Point(267, 239);
             txtCantidadTurnos.Name = "txtCantidadTurnos";
-            txtCantidadTurnos.ReadOnly = true;
             txtCantidadTurnos.Size = new Size(100, 23);
             txtCantidadTurnos.TabIndex = 14;
             // 
             // txtAñoMasAntiguo
             // 
+            txtAñoMasAntiguo.Enabled = false;
             txtAñoMasAntiguo.Location = new Point(267, 270);
             txtAñoMasAntiguo.Name = "txtAñoMasAntiguo";
-            txtAñoMasAntiguo.ReadOnly = true;
             txtAñoMasAntiguo.Size = new Size(100, 23);
             txtAñoMasAntiguo.TabIndex = 15;
             // 
             // txtCantidadConDominios
             // 
+            txtCantidadConDominios.Enabled = false;
             txtCantidadConDominios.Location = new Point(267, 301);
             txtCantidadConDominios.Name = "txtCantidadConDominios";
-            txtCantidadConDominios.ReadOnly = true;
             txtCantidadConDominios.Size = new Size(100, 23);
             txtCantidadConDominios.TabIndex = 16;
             // 
@@ -204,6 +204,7 @@
             btnRegistrar.TabIndex = 17;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = false;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // btnSalir
             // 
