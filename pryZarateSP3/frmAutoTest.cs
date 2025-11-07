@@ -69,8 +69,22 @@ namespace pryZarateSP3
             bool resultado = false;
             if (txtNumeroTurno.Text != "" && txtDominio.Text != "" && txtTitular.Text != "")
             {
-                if (txtDominio.Text.Length >= 6)
+                if (txtDominio.Text.Length >= 6 && txtDominio.Text.Length <= 7)
                 {
+                    int año = (int)numFabricacion.Value;
+                    int añoActual = DateTime.Now.Year;
+                    if (año < 1950 || año > añoActual)
+                    {
+                        MessageBox.Show($"El año de fabricación debe estar entre 1950 y {añoActual}.",
+                        "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                    if (txtNumeroTurno.Text.Length > 5)
+                    {
+                        MessageBox.Show("El número de turno no puede tener más de 5 dígitos.",
+                        "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
                     if (!BuscarTurno(int.Parse(txtNumeroTurno.Text)))
                     {
                         resultado = true;
@@ -91,6 +105,12 @@ namespace pryZarateSP3
             {
                 MessageBox.Show("Debe completar los datos faltantes", "ERROR",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtTitular.Text.Length < 2)
+            {
+                MessageBox.Show("El titular debe tener al menos 2 caracteres.",
+                "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             return resultado;
         }
@@ -146,6 +166,12 @@ namespace pryZarateSP3
         {
             {
                 {
+                    if (Cantidad >= MAX)
+                    {
+                        MessageBox.Show("Se alcanzó el máximo de 50 turnos registrados.",
+                        "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                     if (ValidarDatos())
                     {
                         turnos[Cantidad].NumeroTurno = int.Parse(txtNumeroTurno.Text);
@@ -167,14 +193,23 @@ namespace pryZarateSP3
                         {
                             MessageBox.Show("Se registró turno Nº " + Cantidad);
                             limpiarControles();
-                 
+
                         }
 
                     }
                 }
             }
         }
+
+        private void txtTitular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; 
+            }
+        }
+      }
     }
-}
+
 
 

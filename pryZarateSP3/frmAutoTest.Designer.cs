@@ -257,6 +257,7 @@
             txtTitular.Name = "txtTitular";
             txtTitular.Size = new Size(100, 23);
             txtTitular.TabIndex = 22;
+            txtTitular.KeyPress += txtTitular_KeyPress;
             // 
             // flowLayoutPanel2
             // 
